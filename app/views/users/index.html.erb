@@ -2,5 +2,8 @@
 <p><%= link_to  "投稿画面へ", new_user_path %></p>
 
 <% @users.each do |user| %>
-    <p><%= user.name %></p>    
+    <p>
+        <%= user.name %>
+        <%= link_to  "詳細", user_path(user) %>    
+    </p>    
 <% end %>
